@@ -1,0 +1,362 @@
+/*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Basic|IBM+Plex+Mono:400,700');
+
+:root {
+    --theme-base: "black-highlighter";
+    --theme-id: "eyes-of-argos";
+    --theme-name: "Eyes of Argos Theme";
+ 
+    /* Header */
+    --logo-image: url("https://backrooms-sandbox.wdfiles.com/local--files/eyesofargos/image%20%281%29.png");
+    --header-title: "阿尔戈斯之眼";
+    --header-subtitle: "我们正在注视着……";
+ 
+    /* Typefaces */
+    --body-font: 'Roboto Slab', sans-serif;
+    --header-font: 'IBM Plex Mono', sans-serif;
+    --title-font: 'IBM Plex Mono', sans-serif;
+    --mono-font: "IBM Plex Mono", monospace;
+ 
+    /* Standard Colors */
+    --white-monochrome: 250, 250, 250;
+     /* white*/
+    --black-monochrome: 0, 0, 0;
+    /* black */
+    --bright-accent: 29, 161, 250;
+    /* the bright blue */
+    --medium-accent: 29, 161, 250;
+     /* the bright blue, again*/
+    --dark-accent: 24, 36, 56;
+    /* dark blue for background*/
+
+    /* Primary Theme Colors */
+    --swatch-background: var(--dark-accent);
+    --swatch-primary: var(--bright-accent);
+    --swatch-primary-darker: var(--medium-accent);
+    --swatch-primary-darkest: var(--black-monochrome);
+ 
+    /* Primary Text Colors */
+    --swatch-text-dark: var(--white-monochrome);
+    --swatch-text-light: var(--white-monochrome);
+    --swatch-important-text: var(--bright-accent);
+    --barColour: var(--very-light-gray-monochrome);
+    --linkColour: var(--pale-accent);
+ 
+    /* Primary Menu Colors */
+    --swatch-menubg-color: var(--dark-accent);
+    --swatch-menubg-light-color: var(--pale-gray-monochrome);
+    --swatch-menubg-medium-color: var(--light-gray-monochrome);
+    --swatch-menubg-medium-dark-color: var(--gray-monochrome);
+    --swatch-menubg-dark-color: var(--dark-gray-monochrome);
+    --swatch-menubg-black-color: var(--black-monochrome);
+    --swatch-menubg-hover-color: var(--black-monochrome);
+    --swatch-menutxt-dark-color: var(--white-monochrome);
+    --swatch-menutxt-light-color: var(--white-monochrome);
+    --swatch-border-color: var(--bright-accent);
+ 
+    /* Primary Header Colors */
+    --swatch-headerh1-color: var(--white-monochrome);
+    --swatch-headerh2-color: var(--white-monochrome);
+    --swatch-topmenu-border-color: var(--bright-accent);
+    --swatch-topmenu-bg-color: var(--black-monochrome);
+ 
+    /* Link Colors */
+    --link-color: var(--bright-accent);
+    --visited-link-color: var(--swatch-primary);
+    --hover-link-color: var(--swatch-primary);
+    --newpage-color: var(--alt-accent);
+    --sidebar-links-text: var(--swatch-menutxt-dark-color);
+    --link-color-bright: var(--medium-accent);
+ 
+    /* Rating Module Colors */
+    --rating-module-button-color: var(--black-monochrome);
+    --rating-module-button-plus-color: 0, 200, 0;
+    --rating-module-button-negative-color: 200, 0, 0;
+    --rating-module-button-cancel-color: 200, 200, 200;
+    --rating-module-button-credit-color: 50, 50, 50;
+    --rating-module-text-color: var(--swatch-menutxt-dark-color);
+    --rating-module-text-hover-color: var(--swatch-menutxt-light-color);
+ 
+     /*making the header larger*/
+     --header-height-on-desktop: 10rem;
+ 
+/* Header Gradients */
+     --gradient-header: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(24,36,56,1) 79%);
+     --diagonal-stripes: repeating-linear-gradient(-45deg, rgba(var(--bright-accent), 0.3), rgba(var(--bright-accent), 0.3) 1px, transparent 2px, transparent 30px),
+repeating-linear-gradient(45deg, rgba(var(--bright-accent), 0.3), rgba(var(--bright-accent), 0.3) 1px, transparent 2px, transparent 30px);
+ 
+}
+ 
+/*weird stuff*/
+hr {
+  background-color: rgb(var(--bright-accent));
+  border-color: rgb(var(--bright-accent));
+}
+ 
+#page-title {
+    border-color: rgb(var(--bright-accent));
+    color: rgb(var(--bright-accent))!important;
+}
+ 
+#skrollr-body {
+   background-image: none;
+}
+ 
+#side-bar .side-block div a img {
+   filter: grayscale(100%);
+}
+ 
+#container {
+   background-image: none;
+}
+ 
+div#page-options-bottom-2 > a, div#page-options-bottom > a {
+   border-radius: 0em;
+   -moz-border-radius: 0em;
+   border: none;
+}
+ 
+div#page-options-bottom-2 > a:active, div#page-options-bottom-2 > a:hover, div#page-options-bottom > a:active, div#page-options-bottom > a:hover {
+   border: none;
+}
+ 
+#header, #top-bar {
+   background-attachment: scroll;
+}
+ 
+#header {
+   background-image: none;
+}
+
+#login-status {
+    color: rgb(var(--bright-accent));
+}
+
+#header::before {
+   content: "";
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   left: 8.1rem;
+   top: -1rem;
+   background-image: var(--logo-image);
+   background-size: auto 8rem;
+   background-position: left;
+   background-repeat: no-repeat;
+   opacity: 0.6;
+}
+ 
+#header h1, #header h1 a {
+   position: absolute;
+   top: 1rem;
+   margin: 0;
+   width: 100%;
+   display: flex;
+   justify-content: left;
+   z-index: 0;
+}
+ 
+#header h2, #header h2 span, #header h2 span::before {
+   position: absolute;
+   top: 2rem;
+   margin: 0;
+   left: 2rem;
+   width: 100%;
+   display: flex;
+   justify-content: left;
+}
+ 
+#header h1 a::before, #header h2 span::before {
+   text-shadow: .063rem 0.1rem 0.1rem #0c0c0c;
+}
+ 
+/*mobile*/
+@media only screen and (max-width: 768px) {
+#header::before {
+   left: unset;
+   top: unset;
+   background-position: none;
+}
+
+#header h1, #header h1 a {
+   justify-content: none;
+}
+}
+ 
+/* Header Colours */
+h1 {
+    color: rgb(var(--bright-accent));
+}
+h2, h3, h4, h5, h6 {
+    color: rgb(var(--white-monochrome));
+}
+/*image block*/
+.scp-image-block .scp-image-caption {
+    color: rgb(var(--bright-accent));
+    background-color: rgb(var(--black-monochrome));
+}
+ 
+/*rate module*/
+.page-rate-widget-box {
+    background: rgb(var(--bright-accent));
+    border-color: rgb(var(--black-monochrome));
+    border-width: 3px;
+}
+ 
+/*table*/
+table.wiki-content-table th {
+border: 1px solid rgb(var(--bright-accent)) !important;
+background-color: rgb(var(--black-monochrome));
+color: rgb(var(--bright-accent));
+}
+ 
+table.wiki-content-table td {
+border: 1px solid rgb(var(--bright-accent)) !important;
+}
+ 
+/*the tabs*/ /*dies*/
+.yui-navset .yui-nav,
+.yui-navset .yui-navset-top .yui-nav {
+    border-color: rgb(var(--dark-accent));
+    -webkit-box-shadow: 0 -webkit-calc(0.0625rem * 5) 0 0 rgb(var(--dark-accent));
+    box-shadow: 0 calc(0.0625rem * 5) 0 0 rgb(var(--light-pale-gray-monochrome));
+}
+ 
+/* Unselected Tab Values */
+.yui-navset .yui-nav a,
+.yui-navset .yui-navset-top .yui-nav a {
+    background-color: rgb(var(--black-monochrome)); /*here*/
+    color: rgb(var(--bright-accent));
+}
+ 
+/* Tab Hover Values */
+.yui-navset .yui-nav a:hover,
+.yui-navset .yui-nav a:focus {
+    background: rgba(var(--black-monochrome), 0.7);
+    color: rgb(var(--bright-accent)) !important;
+}
+ 
+.yui-navset .yui-nav li,
+.yui-navset .yui-navset-top .yui-nav li {
+    background: rgb(var(--bright-accent));
+    -webkit-box-shadow: 0 0 0 0.0625rem rgb(var(--dark-accent));
+    box-shadow: 0 0 0 0.0625rem rgb(var(--dark-accent));
+    margin: 0.25em 0.25em 0.5em;
+}
+ 
+/* Selected Tab */
+ 
+.yui-navset .yui-nav .selected,
+.yui-navset .yui-navset-top .yui-nav .selected,
+.yui-navset .yui-nav .selected:hover,
+.yui-navset .yui-navset-top .yui-nav .selected:hover {
+    color: rgb(var(--dark-accent));
+    margin-bottom: 0.25rem;
+}
+ 
+.yui-navset .yui-nav .selected a,
+.yui-navset .yui-nav .selected a em {
+    color: rgb(var(--dark-accent));
+}
+ 
+.yui-navset .yui-nav .selected a {
+    /* Undoes a color set by wikidot's default layout */
+    color: rgb(252, 252, 252) !important;
+}
+ 
+.yui-navset .yui-content {
+    background-color: rgb(var(--dark-accent)); /*edit*/
+}
+ 
+.yui-navset .yui-content,
+.yui-navset .yui-navset-top .yui-content {
+    border-color: rgb(var(--dark-accent));
+}
+ 
+.yui-navset-left .yui-content {
+    border-left-color: rgb(var(--dark-accent));
+}
+/* Selected tab top colour */
+.yui-navset .yui-nav .selected a,
+.yui-navset .yui-nav .selected a:focus,
+.yui-navset .yui-nav .selected a:hover {
+        background-color: rgb(var(--bright-accent));
+        color: #000000;
+}
+ 
+/*funny blocks*/
+.blockquote {
+   background-color:rgb(var(--black-monochrome));
+   border-color: rgb(var(--bright-accent));
+   box-shadow: 0.05rem 0.1rem 0.3rem rgba(0,0,0,.25);
+}
+ 
+blockquote {
+   background-color:rgb(var(--black-monochrome));
+   border-color: rgb(var(--bright-accent));
+   box-shadow: 0.05rem 0.1rem 0.3rem rgba(0,0,0,.25);
+}
+
+.blockquote {
+   background-color:rgb(var(--black-monochrome));
+   border-color: rgb(var(--bright-accent));
+   box-shadow: 0.05rem 0.1rem 0.3rem rgba(0,0,0,.25);
+}
+
+.styled-quote {
+   background-color:rgb(var(--black-monochrome));
+   border-left: 0.5rem solid rgba(var(--bright-accent));
+   color:rgb(var(--white-monochrome));
+   padding: 0.1rem 1rem;
+   margin: 0.5rem 0 0.5rem 0.25rem;
+   box-shadow: 0.05rem 0.1rem 0.3rem rgba(0,0,0,.25);
+}
+ 
+.dark-styled-quote a{
+color: rgb(var(--swatch-menubg-medium-color));
+}
+ 
+.darkblock {
+   background-color:rgb(var(--black-monochrome));
+   color:rgb(var(--white-monochrome));
+   padding: 0.01rem 1rem;
+   margin: 0.5rem 0 0.5rem 0.25rem;
+   box-shadow: 0 0.2rem 0.3rem rgba(0,0,0,.25);
+}
+ 
+.darkblock a {
+color: rgb(var(--swatch-menubg-medium-color));
+}
+ 
+.borderblock {
+   background-color:rgb(var(--black-monochrome));
+   color:rgb(var(--white-monochrome));
+   padding: 0.01rem 1rem;
+   margin: 0.5rem 0 0.5rem 0.25rem;
+   box-shadow: 0 0.2rem 0.3rem rgba(0,0,0,.25);
+   border: solid 0.3rem rgb(var(--bright-accent));
+}
+ 
+.logoblock{
+padding: 0.01rem 1rem;
+box-shadow: 0 0.2rem 0.3rem rgba(0,0,0,.25);
+margin: 0.5rem 0 0.5rem 0.25rem;
+display: block;
+position: relative;
+background-color: black;
+}
+
+.logoblock::after{
+content: "";
+float: center;
+border: solid 2px #000;
+background: url(https://backrooms-sandbox.wdfiles.com/local--files/eyesofargos/image%20%281%29.png) center/50% no-repeat;
+opacity: 0.5;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+position: absolute;
+z-index: 1;
+}
