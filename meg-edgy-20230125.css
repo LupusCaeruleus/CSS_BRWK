@@ -1,0 +1,558 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900|PT+Mono|Poppins:600,800|Share+Tech+Mono|Anonymous+Pro');
+
+@import url('https://fonts.googleapis.com/css2?family=Baumans&family=Graduate&family=Kelly+Slab&family=Kumar+One&family=Tulpen+One&family=ZCOOL+QingKe+HuangYou&display=swap');
+ 
+@import url('https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap');
+ 
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300&display=swap');
+
+@font-face {
+    font-family: 'GlowSansSC';
+    src: url('https://cdn.jsdelivr.net/gh/LupusCaeruleus/Fonts@main/GlowSansSC-Compressed-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GlowSansSC';
+    src: url('https://cdn.jsdelivr.net/gh/LupusCaeruleus/Fonts@main/GlowSansSC-Compressed-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* All Vars Used */
+ 
+:root {
+    /* S-CSS-P Integration */
+    /* If you're making a new CSS theme, please include the following three variables at minimum. */
+    --theme-base: "nuscp";
+    /* mua be either "nuscp" or "sigma9" */
+    --theme-id: "meg-edgy";
+    /* set this to the URL of your theme's page - eg for "component:ar-theme", set it to "ar-theme" */
+    --theme-name: "MEG EDGY";
+    /* set this to your theme's full name */
+ 
+    /* Header */
+   --logo-image: url("http://backrooms-sandbox-2.wikidot.com/local--files/trailmixncocoa-meg-theme/IMG_3129.PNG");
+    --header-title: "M.E.G.记录中心";
+    --header-subtitle: "The M.E.G.机密数据库";
+ 
+    /* Typefaces */
+    --body-font: 'Share Tech Mono', 'GlowSansSC', sans-serif;
+    --header-font: 'Oxygen Mono', 'GlowSansSC', sans-serif;
+    --title-font: 'Kelly Slab', 'GlowSansSC', sans-serif;
+    --mono-font: "PT Mono", 'Noto Serif SC', serif;
+ 
+    /* Standard Colors */
+    --white-monochrome: 252, 252, 252;
+    /* white */
+    --pale-gray-monochrome: 185, 185, 185;
+    /* v light gray for blockquotes and stuff */
+    --light-gray-monochrome: 170, 170, 170;
+    /* light accent gray for login status */
+    --gray-monochrome: 66, 66, 72;
+    /* gray */
+    --grayer-monochrome: 130, 130, 135;
+    --dark-gray-monochrome: 48, 48, 52;
+    /* dark accent gray for sidebar background */
+    --black-monochrome: 30, 20, 20;
+    /* black */
+    --bright-accent: 125, 25, 25;
+    /* Some sidebar text, edit button text etc */
+    --medium-accent: 74, 0, 0;
+    /* the annoying header thing */
+    --dark-accent: 12, 12, 12;
+    /* search bar and edit button */
+    --newpage-color: 230, 10, 10;
+    /* text highlight colour, url link */
+    --terminal-medium: 74, 0, 0;
+    /* edit button borders */
+    --pale-accent: 0, 221, 221;
+    /* dark yellow-brown */
+ 
+    --tester-blue: 0, 0, 221;
+    /* blue for testing */
+    --tester-green: 0, 221, 0;
+    /*green for testing */
+    --tester-purple: 221, 0, 221;
+    /*purple for testing */
+    --tester-yellow: 221, 221, 0;
+    /*yellow for testing */
+ 
+    --dark-accent-red: 74, 0, 0;
+    --mid-accent-red: 140, 25, 30;
+    --bright-red: 170, 15, 15;
+    --shadow-red: 30, 20, 20;
+    --darkish-red: 95, 10, 10;
+    --blinding-red: 230, 10, 10;
+    --contrast-salmon: 250, 160, 160;
+ 
+    /* Primary Theme Colors */
+    --swatch-background: var(--grayer-monochrome);
+    --swatch-primary: var(--newpage-color);
+    --swatch-primary-darker: var(--mid-accent-red);
+    --swatch-primary-darkest: var(--shadow-red);
+ 
+    /* Primary Text Colors */
+    --swatch-text-dark: var(--darkish-red);
+    --swatch-text-light: var(--light-gray-monochrome);
+    --swatch-important-text: var(--tester-purple);
+ 
+      /* Primary Menu Colors */
+    --swatch-menubg-color: var(--shadow-red);
+    --swatch-menubg-light-color: var(--dark-accent);
+    --swatch-menubg-medium-color: var(--mid-accent-red);
+    --swatch-menubg-medium-dark-color: var(--bright-red);
+    --swatch-menubg-dark-color: var(--mid-accent-red);
+    --swatch-menubg-black-color: var(--mid-accent-red);
+    --swatch-menubg-hover-color: var(--mid-accent-red);
+    --swatch-menutxt-dark-color: var(--bright-red);
+    --swatch-menutxt-light-color: var(--light-gray-monochrome);
+    --swatch-border-color: var(--dark-gray-monochrome);
+ 
+    /* Primary Header Colors */
+    --swatch-headerh1-color: var(--light-gray-monochrome);
+    --swatch-headerh2-color: var(--blinding-red);
+    --swatch-topmenu-border-color: var(--dark-accent-red);
+    --swatch-topmenu-bg-color: var(--dark-accent-red);
+ 
+    /* Header Gradients*/
+    --gradient-header: linear-gradient(to bottom,
+     rgba(var(--dark-accent-red),0.97) 10%,
+     rgba(var(--dark-accent-red),0.97) 40%,
+     rgb(var(--black-monochrome)) 100%);
+ 
+    --gradient-topmenu: linear-gradient(to bottom,
+     white 0%,
+     white 7.5rem,
+     rgba(var(--swatch-topmenu-border-color), 1) 7.5rem,
+     rgba(var(--swatch-topmenu-bg-color), 1) 7.625rem,
+     rgba(var(--swatch-topmenu-bg-color), 0.95) calc(100% - 0.125rem),
+     rgba(var(--swatch-topmenu-bg-color), 1) calc(100% - 0.125rem),
+     rgba(var(--swatch-topmenu-border-color), 1) 100%);
+ 
+    --gradient-topmenu-mobile: linear-gradient(to bottom,
+     rgba(var(--swatch-topmenu-border-color), 1) 0,
+     rgba(var(--swatch-topmenu-bg-color), 1) 0.125rem,
+     rgba(var(--swatch-topmenu-bg-color), 1) calc(3rem - 0.125rem),
+     rgba(var(--swatch-topmenu-bg-color), 1) calc(3rem - 0.125rem),
+     rgba(var(--swatch-topmenu-border-color), 1) 3rem);
+ 
+   --diagonal-stripes: linear-gradient(transparent 0);
+ 
+    --gradient-sidemenu-header: linear-gradient(10deg,
+     rgba(var(--mid-accent-red), 0.45) 0%,
+     rgba(var(--mid-accent-red), 0.55) 100%);
+    --header-background-image-size: 100% 7.5rem;
+ 
+    /* Sidebar */
+    --sidebar-transition-timing: 0.5s ease-in-out 0.1s;
+    --sidebar-internal-border-thickness: 0.16rem;
+ 
+    --background-gradient-color: var(--light-gray-monochrome);
+    --background-gradient-distance: 50rem;
+ 
+}
+ 
+#container {
+   background-image: radial-gradient(circle, rgb(var(--medium-accent), 0.05) 50%, transparent 0);
+   background-size: 0.25em 0.25em;
+   background-repeat: repeat;
+   background-attachment: fixed;
+   text-align: justify;
+   text-justify: inter-word;
+   font-size: 1.1em;
+ 
+}
+
+html,
+body,
+#side-bar:hover {
+    scrollbar-color: rgb(var(--tester-blue)) rgb(var(--tester-green));
+    }
+ 
+ ::-webkit-scrollbar,
+ #side-bar:hover::-webkit-scrollbar {
+    background-color: rgb(var(--shadow-red));
+    }
+ 
+ ::-webkit-scrollbar-thumb,
+ #side-bar:hover::-webkit-scrollbar-thumb {
+    background-color: rgb(var(--mid-accent-red));
+    }
+ 
+.scp-image-block .scp-image-caption {
+    font-size: .8em;
+    background-color:rgb(var(--dark-accent));
+    color: rgb(var(--bright-red));
+}
+ 
+#header h1 {
+    color: rgb(var(--tester-green));
+}
+ 
+#page-title {
+    font-family: 'Kelly Slab', 'GlowSansSC';
+    border-color: rgba(var(--mid-accent-red))!important;
+ 
+    background: linear-gradient(to bottom,
+     rgba(var(--shadow-red),0.97) 0%,
+     rgba(var(--dark-accent-red),0.97) 35%,
+     rgb(var(--bright-red)) 80%);
+ 
+    background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+ 
+#side-bar div.menu-item .sub-text {
+    color: rgb(var(--pale-gray-monochrome));
+}
+#login-status {
+    color: rgb(var(--medium-accent));
+}
+.code {
+    padding: 5px 5px 5px 15px;
+    margin-bottom:10px;
+    width: 100%;
+    font-family: var(--header-font);
+    font-size: 1.1em;
+    background-color:rgb(var(--shadow-red));
+    border: 2px dashed rgb(var(--mid-accent-red));
+    color: rgb(var(--bright-red));
+}
+ 
+.hl-main {
+    filter: invert(1) hue-rotate(180deg);
+}
+ 
+.page-options-bottom a {
+    background-color:rgb(var(--shadow-red)) !important;
+    color: rgb(var(--blinding-red)) !important;
+    font-family: var(--header-font);
+}
+ 
+table.wiki-content-table th {
+    text-align: left !important;
+    font-family: var(--title-font) !important;
+    color: rgb(var(--pale-gray-monochrome));
+    background-color: rgb(var(--dark-accent-red)) !important;
+    border: 1px solid rgb(var(--mid-accent-red)) !important;
+}
+ 
+table.wiki-content-table tr {
+    background-color:rgba(var(--gray-monochrome), 0.15) !important;
+    border: 1px solid rgb(var(--mid-accent-red)) !important;
+    color: rgb(var(--tester-purple));
+}
+ 
+table.wiki-content-table td {
+    background-color: rgba(var(--gray-monochrome), 0.15)!important;
+    border: 1px solid rgb(var(--mid-accent-red)) !important;
+    color: rgb(var(--dark-accent-red));
+}
+ 
+.footnotes-footer {
+    margin-bottom:10px;
+    width: 100%;
+    font-family: var(--body-font);
+    font-size: 1.1em;
+    background-color: rgba(var(--mid-accent-red), 0.20)!important;
+    border-left: 0.5rem solid rgba(var(--dark-accent-red));
+    color: rgb(var(--dark-accent-red));
+}
+ 
+span.printuser {
+    color: rgb(var(--light-gray-monochrome)) !important;
+}
+ 
+table.wiki-content-table {
+    border: 2px solid rgb(var(--mid-accent-red));
+}
+ 
+hr {
+    background-color: rgb(var(--bright-accent)) !important;
+ 
+/* TABS */
+}
+.yui-navset .yui-nav li a em, .yui-navset-top .yui-nav li a em, .yui-navset-bottom .yui-nav li a em {
+    color: rgb(var(--bright-red));
+}
+.yui-navset .yui-nav .selected a, .yui-navset .yui-nav .selected a em {
+color: rgb(var(--light-gray-monochrome));
+}
+ 
+/* RATING MODULE */
+.page-rate-widget-box {
+    background: -webkit-gradient(linear,
+     left bottom, left top,
+     from(rgba(var(--dark-accent),1)),
+     to(rgba(var(--dark-accent), 1)));
+    background: -webkit-linear-gradient(bottom,
+     rgba(var(--dark-accent),1) 0%,
+     rgba(var(--dark-accent), 1) 100%);
+    background: -o-linear-gradient(bottom,
+     rgba(var(--dark-accent),1) 0%,
+     rgba(var(--dark-accent), 1) 100%);
+    background: linear-gradient(to top,
+     rgba(var(--dark-accent),1) 0%,
+     rgba(var(--dark-accent), 1) 100%);
+    border: 2px solid rgb(var(--mid-accent-red));
+}
+#page-content .rate-box-with-credit-button {
+    background: -webkit-gradient(linear,
+     left bottom, left top,
+     from(rgba(var(--dark-accent),1)),
+     to(rgba(var(--dark-accent), 1)));
+    background: -webkit-linear-gradient(bottom,
+     rgba(var(--dark-accent),1) 0%,
+     rgba(var(--dark-accent), 1) 100%);
+    background: -o-linear-gradient(bottom,
+     rgba(var(--dark-accent),1) 0%,
+     rgba(var(--dark-accent), 1) 100%);
+    background: linear-gradient(to top,
+     rgba(var(--dark-accent),1) 0%,
+     rgba(var(--dark-accent), 1) 100%);
+    border-color: rgb(var(--mid-accent-red));
+}
+ 
+.page-rate-widget-box .rate-points {
+    color: rgb(var(--bright-red)) !important;
+}
+.page-rate-widget-box .rateup, .page-rate-widget-box .ratedown, .page-rate-widget-box .cancel, .page-rate-widget-box .rateup a, .page-rate-widget-box .ratedown a, .page-rate-widget-box .cancel a {
+    background-color: rgb(var(--dark-accent-red)) !important;
+}
+#page-content .rate-box-with-credit-button > .creditButton > p > a::before {
+    background-color: rgb(var(--dark-accent-red));
+}
+ 
+#page-content .rate-box-with-credit-button > .creditButton:hover {
+    background: rgba(var(--tester-green), 0.8);
+}
+ 
+.page-rate-widget-box .ratedown a:hover, .page-rate-widget-box .rateup a:hover, .page-rate-widget-box .cancel a:hover {
+    background-color: rgb(var(--bright-red)) !important;
+}
+.scp-image-block {
+    border: solid .1625rem rgb(var(--mid-accent-red));
+}
+ 
+blockquote, .blockquote {
+    padding: 5px 5px 5px 15px;
+    margin-bottom:10px;
+    font-size: 1rem;
+    background-color:rgb(var(--shadow-red));
+    border: 3px solid rgb(var(--mid-accent-red));
+    color: rgb(var(--light-gray-monochrome));
+    margin: 10px auto 0;
+}
+ 
+blockquote blockquote, .blockquote blockquote {
+    padding: 5px 5px 5px 15px;
+    border: 3px solid rgb(var(--mid-accent-red));
+    color: rgb(var(--bright-red));
+    margin: 0 auto 10px;
+    font-size: 1rem;
+}
+ 
+#search-top-box form[id="search-top-box-form"]:not(:focus-within) input[type="text"] {
+    background-color: rgb(var(--dark-accent));
+}
+#search-top-box:not(:focus-within)::before {  
+    color: rgb(var(--dark-accent));
+}
+ 
+#top-bar div.mobile-top-bar > ul > li > a, #top-bar div.top-bar > ul > li > a {
+    color: rgb(var(--pale-gray-monochrome));
+}
+#top-bar div.mobile-top-bar > ul > li > a:hover, #top-bar div.top-bar > ul > li > a:hover, #top-bar div.mobile-top-bar > ul > li:hover > a, #top-bar div.top-bar > ul > li:hover > a {
+    color: rgb(var(--white-monochrome));
+}
+.open-menu a {
+    color: rgb(var(--tester-purple)) !important;
+}
+ 
+@-webkit-keyframes marquee {
+         0% { -webkit-transform: translateX(100%); transform: translateX(100%) }
+    100% { -webkit-transform: translateX(-100%); transform: translateX(-100%) }
+}
+ 
+@keyframes marquee {
+         0% { -webkit-transform: translateX(100%); transform: translateX(100%) }
+    100% { -webkit-transform: translateX(-100%); transform: translateX(-100%) }
+}
+@media only screen and (max-width: 768px) {
+    #header h2 {
+        overflow: hidden;
+    height: 100%;
+    pointer-events: none;
+    }
+    #header h2 span {
+        -webkit-animation: marquee linear 10s infinite;
+                animation: marquee linear 10s infinite;
+        width: 150% !important;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+    #header h1 span {
+    font-size: 75%;
+    }
+    #top-bar {
+        font-size: calc(var(--base-font-size)*0.70);
+    }
+ 
+}
+ 
+.hovertip{
+background-color:rgb(var(--shadow-red)) !important;
+background-image:radial-gradient(ellipse 1000% 100% at 50% 90%, transparent,rgb(var(--shadow-red))) !important;
+}
+ 
+#side-bar {
+background-size: 0%;
+}
+ 
+.blockquote h1,
+.blockquote h2,
+.blockquote h3,
+.blockquote h4,
+.blockquote h5,
+blockquote h1,
+blockquote h2,
+blockquote h3,
+blockquote h4,
+blockquote h5 {
+    color: rgb(var(--bright-red));
+}
+ 
+.styled-quote {
+  text-align: justify;
+  text-justify: inter-word;
+    color: rgb(var(--dark-accent-red));
+    background-color:rgb(var(--pale-gray-monochrome));
+    border-left: 0.5rem solid rgba(var(--dark-accent-red));
+}
+ 
+.styled-quote2 {
+    color: rgb(var(--dark-accent-red));
+    background-color:rgb(var(--pale-gray-monochrome));
+    border-left: 0.5rem solid rgba(var(--mid-accent-red));
+    padding: 5px 5px 5px 15px;
+   margin-right: 5px;
+}
+ 
+.dark-styled-quote {
+   color:rgb(var(--blinding-red));
+   background-color:rgb(var(--dark-accent-red));
+   border-left: 0.5rem solid rgba(var(--bright-red));
+}
+ 
+.lightblock {
+   background-color:rgb(var(--pale-gray-monochrome));
+}
+ 
+.darkblock {
+   background-color:rgb(var(--dark-accent-red));
+   color:rgb(var(--blinding-red));
+}
+ 
+.darkblock2 {
+   background-color:rgb(var(--dark-accent-red));
+   color:rgb(var(--blinding-red));
+   display: grid;
+   text-align: justify;
+   word-wrap: normal;
+   font-size: 85%;
+   padding: 5px 10px 5px 15px;
+   margin-right: 5px;
+}
+ 
+.testingblock{
+   color: rgb(var(--mid-accent-red));
+   border: solid 2px rgb(var(--mid-accent-red));
+   padding: 0.01rem 1rem 1rem 1rem;
+   margin: 0.5rem 0 0.5rem 0.20rem;
+   box-shadow: 0 0.8rem 1.2rem rgba(0,0,0,.25);
+ 
+    background: url(http://backrooms-wiki.wdfiles.com/local--files/theme%3Ameg-edgy/F59005DF-954F-4EB8-8116-2E7F06FB4211.png) center/20% no-repeat;
+    background-color: rgb(var(--pale-gray-monochrome));;
+    background-position: right 50% bottom 25px;
+    padding-bottom: 65px;
+    position: relative;
+    /* clear: both; */
+    display: table;
+}
+ 
+.testingblock::after{
+    content: "M.E.G. - Bettering Humanity";
+    display: flex !important;
+    justify-content: center !important;
+    font-family: 'Kelly Slab', 'GlowSansSC', cursive;
+    font-weight: bold;
+    font-size: 80%;
+    color: black;
+    background-color: rgb(var(--pale-gray-monochrome));
+    position: relative;
+    transform: translateY(325%);
+}
+ 
+.logoblock{
+    padding: 5px 5px 5px 15px; /* adds space - up right down left */
+    font-size: 1rem;
+    font-family: 'Share Tech Mono', 'GlowSansSC';
+    background: url(http://backrooms-wiki.wdfiles.com/local--files/theme%3Ameg-edgy/F59005DF-954F-4EB8-8116-2E7F06FB4211.png) center/20% no-repeat;
+    background-color: rgb(var(--pale-gray-monochrome));
+    background-position: right 50% bottom 25px;
+    border: 3px solid rgb(var(--mid-accent-red));
+    border-radius: 15px;
+    color: rgb(var(--black-monochrome));
+    margin: 10px auto 0; /* Adds a space above the box */
+    padding-bottom: 65px;
+    position: relative;
+    /*clear: both; */
+    display: table;
+}
+ 
+.logoblock::after{
+    content: "M.E.G. - 为了更好的人类";
+    display: flex !important;
+    justify-content: center !important;
+    font-family: 'Kelly Slab', 'GlowSansSC';
+    font-weight: bold;
+    font-size: 80%;
+    color: black;
+    background-color: rgb(var(--pale-gray-monochrome));
+    position: relative;
+    transform: translateY(325%);
+}
+ 
+.logoblock h2{
+    color: rgb(var(--dark-accent-red));
+}
+ 
+#toc_container {
+    background: blue none repeat scroll 0 0;
+    border: 1px solid #aaa;
+    display: table;
+    font-size: 95%;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    padding: 20px;
+    width: auto;
+}
+ 
+.toc_title {
+    font-weight: 700;
+    text-align: center;
+}
+ 
+#toc_container li, #toc_container ul, #toc_container ul li{
+    list-style: outside none none !important;
+}
