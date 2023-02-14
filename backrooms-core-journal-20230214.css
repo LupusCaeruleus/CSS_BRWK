@@ -1,0 +1,483 @@
+:root {
+ --theme-base: "black-highlighter";
+    --theme-id: "backcore-magezine";
+    --theme-name: "Backrooms Core Journal Theme";
+ 
+    /* Header */
+       --logo-image: url("https://s1.ax1x.com/2022/08/11/vGgOzQ.png");
+       --header-title: "后室核心期刊";
+       --header-subtitle: "核心，科技。";
+ 
+  /* 标准色 */
+    --white-monochrome: 255, 255, 255;
+    /* 白色 */
+    --very-light-gray-monochrome: 56, 116, 248;
+    /* 次强调色（应用于杂项） */
+    --light-gray-monochrome: 135, 170, 230;
+    /* 次强调色（登录时） */
+    --gray-monochrome: 0, 0, 0;
+    /* 灰色 */
+    --black-monochrome: 0, 0, 0;
+    /* 黑色 */
+    --medium-accent: 0, 0, 136;
+    /* 蓝色*/
+    --dark-accent: 0, 0, 136;
+    /* 深蓝色 */
+    --dark-gray-monochrome: 0, 0, 136;
+ 
+/* 评分模块颜色 */
+   --rating-module-button-plus-color: var(--dark-accent);
+   --rating-module-button-negative-color: var(--dark-accent);
+   --rating-module-button-cancel-color: var(--dark-accent);
+   --rating-module-button-credit-color: var(--black-monochrome);
+ 
+/* 链接颜色 */
+   --link-color: 0, 0, 136;
+   --hover-link-color: 0, 0, 136;
+   --visited-link-color: 0,0,0;
+   --newpage-color: 68,0,136;
+ 
+    /* 背景与网站标题色 */
+    --background-gradient-color: var(--light-gray-monochrome);
+    --header-gradient-color-bottom: var(--white-monochrome);
+    --header-gradient-color-middle: var(--white-monochrome);
+    --header-gradient-color-top: var(--white-monochrome);
+ 
+    /* 主要主题色 */
+    --swatch-background: var(--light-gray-blacmonochrome);
+    --swatch-primary: var(--white-accent);
+    --swatch-primary-darker: var(--medium-accent);
+    --swatch-primary-darkest: var(--dark-accent);
+}
+ 
+/* 版头 */
+#header::before {
+   content: "";
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   background-image: var(--logo-image);
+   opacity: 0.25;
+}
+ 
+#header h1 a::before, #header h2 span::before {
+   color: #000088;
+   text-shadow: none;
+}
+ 
+body::after {
+    content: "";
+    background-image: none;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
+ 
+#skrollr-body {
+  background-image: none;
+  background-color: white;
+}
+ 
+::-webkit-scrollbar {
+   width: 10px;
+   height: 10px;
+   background-color: rgb(var(--white-monochrome)) !important;
+   box-sizing: border-box;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: #000088;
+}
+
+#container {
+  background-image: none;
+}
+ 
+#login-status a {
+color: black
+}
+ 
+#login-status {
+color: black
+}
+ 
+#login-status span {
+color: black
+}
+ 
+#search-top-box {
+ background-color: #00008825;
+}
+
+#main-content {
+    border: 2px solid #000088;
+    box-shadow: 1px 1px 3px 2px #00008840;
+    padding: 2px 8px;
+    margin-top: 16px;
+}
+
+p {
+    text-indent: 16px;
+}
+
+div.buttons input:hover{
+   background-color: #ffffff;
+   color: #000088;
+}
+
+div.buttons input:focus,
+div.buttons input:focus-within{
+   background-color: #ffffff;
+   color: #000088;
+}
+
+#footer{
+ margin: 16px 0 0 0;
+}
+
+hr {
+    background: rgb(var(--dark-accent));
+    border: 4px soild rgb(var(--dark-accent));
+    margin: 0 2px;
+}
+
+/* 表格 */
+table.wiki-content-table th {
+ background-color: rgb(var(--dark-accent));
+}
+
+/* 图片块 */
+.scp-image-block {
+    border: 0.5rem soild #000088;
+}
+ 
+.scp-image-block .scp-image-caption {
+    color: rgb(var(--white-monochrome));
+    background-color: rgb(var(--gray-monochrome));
+}
+ 
+/*评分块*/
+ 
+.page-rate-widget-box {
+    background-color:rgba(var(--dark-accent),.5);
+    border-left: 0.2rem solid rgba(var(--dark-accent));
+}
+ 
+/* TABVIEW */
+ 
+.yui-navset .yui-content {
+   background-color:rgba(var( --light-gray-monochrome), .25);
+     border-color: rgba(var(--medium-accent), 1);
+}
+ 
+/*未选择的tab*/
+.yui-navset .yui-nav a,
+.yui-navset .yui-navset-top .yui-nav a {
+     background-color: rgba(var(--light-gray-monochrome), .25);
+    color:rgb(var(--black-monochrome));
+}
+ 
+/*鼠标移上去的tab*/
+.yui-navset .yui-nav a:hover,
+.yui-navset .yui-nav a:focus {
+     background-color: rgba(var(--medium-accent), .8);
+}
+ 
+/*选了的tab*/
+.yui-navset .yui-nav .selected,
+.yui-navset .yui-navset-top .yui-nav .selected {
+     background-color: rgba(var(--medium-accent), 1);
+}
+ 
+.yui-navset .yui-nav .selected a:focus,
+.yui-navset .yui-nav .selected a:active {
+     background-color: rgba(var(--dark-accent), 1);
+     color: #ffffff;
+}
+ 
+/* 标准引用块 */
+blockquote, div.blockquote {
+    border: none;
+    background-color: #bbbbbb;
+    background-opacity: 0.4
+}
+ 
+/* 代码块 */
+.code {
+    border: 1px solid;
+    background-color: #bbbbbb;
+}
+ 
+/*标题块/暗色标题块(block是正文，box是标题)*/
+.titleblock {
+   background-color: rgb(255,255,255);
+   padding: 0.5rem 1rem 0.10rem;
+   margin: 1.5rem 0rem 0.5rem 0rem;
+   box-shadow: 0 0.2rem 0.3rem rgba(0,0,0,.25);
+   border: solid rgb(var(--dark-accent)) 2px;
+}
+ 
+.titlebox{
+  position: relative;
+  top: -1.6rem;
+  background-color: rgb(var(--dark-accent));
+  color: rgb(255,255,255);
+  padding: 0.25rem 1rem;
+  line-height: 0.1rem;
+}
+ 
+.dark-titleblock {
+   background-color: rgb(var(--dark-accent));
+   color: rgb(255,255,255);
+   padding: 0.5rem 1rem 0.10rem;
+   margin: 1.5rem 0rem 0.5rem 0rem;
+   box-shadow: 0 0.2rem 0.3rem rgba(0,0,0,.25);
+   border: solid rgb(255,255,255) 2px;
+}
+
+.dark-titleblock a {
+   color: white;
+}
+
+.dark-titlebox{
+  position: relative;
+  top: -1.6rem;
+  background-color: rgb(255,255,255);
+  color: rgb(0,0,136);
+  padding: 0.25rem 1rem;
+  line-height: 0.1rem;
+}
+ 
+/*各种装饰块*/
+ 
+.darkblock {
+  background-color: rgb(0,0,136);
+}
+
+.darkblock a{
+   color: #bbbbbb;
+}
+ 
+.styled-quote {
+   background-color:rgb(255,255,255);
+   border-left: 0.5rem solid rgba(var(--dark-accent));
+   padding: 0.1rem 1rem;
+   margin: 0.5rem 0 0.5rem 0.25rem;
+   box-shadow: 0.05rem 0.1rem 0.3rem rgba(0,0,0,.25);
+}
+ 
+.dark-styled-quote {
+   background-color:rgb(var(--dark-accent));
+   border-left: 0.5rem solid rgba(255,255,255);
+   color:rgb(var(--white-monochrome));
+   padding: 0.1rem 1rem;
+   margin: 0.5rem 0 0.5rem 0.25rem;
+   box-shadow: 0.05rem 0.1rem 0.3rem rgba(0,0,0,.25);
+}
+ 
+.dark-styled-quote a{
+   color: #bbbbbb;
+}
+ 
+.styled-quote-d {
+   background-color:rgb(255,255,255);
+   border-left: 0.5rem solid rgba(var(--dark-accent));
+   border-right: 0.5rem solid rgba(var(--dark-accent));
+   padding: 0.1rem 1rem;
+   margin: 0.5rem 0 0.5rem 0.25rem;
+   box-shadow: 0.05rem 0.1rem 0.3rem rgba(0,0,0,.25);
+}
+ 
+.dark-styled-quote-d {
+   background-color:rgba(var(--dark-accent));
+   border-left: 0.5rem solid rgba(255,255,255);
+   border-right: 0.5rem solid rgba(255,255,255);
+   color:rgb(var(--white-monochrome));
+   padding: 0.1rem 1rem;
+   margin: 0.5rem 0 0.5rem 0.25rem;
+   box-shadow: 0.05rem 0.1rem 0.3rem rgba(0,0,0,.25);
+}
+ 
+.dark-styled-quote-d a{
+   color: #bbbbbb;
+}
+ 
+.borderblock{
+    background-color:rgb(255,255,255);
+    border: 0.5rem solid rgba(var(--dark-accent));
+   padding: 0.1rem 1rem;
+   margin: 0.5rem 0 0.5rem 0.25rem;
+   box-shadow: 0.05rem 0.1rem 0.3rem rgba(0,0,0,.25);
+}
+ 
+.dark-borderblock{
+   background-color:rgb(var(--dark-accent));
+   border: 0.5rem solid rgba(255,255,255);
+   color:rgb(var(--white-monochrome));
+   padding: 0.1rem 1rem;
+   margin: 0.5rem 0 0.5rem 0.25rem;
+   box-shadow: 0.05rem 0.1rem 0.3rem rgba(0,0,0,.25);
+}
+ 
+.dark-borderblock a{
+   color: #bbbbbb;
+}
+ 
+/*有logo或者别的什么图片的块*/
+ 
+.logoblock{
+        padding: 0.01rem 1rem;
+    box-shadow: 0 0.2rem 0.3rem rgba(0,0,0,.25);
+    margin: 0.5rem 0 0.5rem 0.25rem;
+    display: block;
+    position: relative;
+    background-color: rgb(var(--white-monochrome));
+    }
+ 
+.logoblock::after{
+    content: "";
+    float: center;
+    border: solid 2px #0000;
+    background: var(--logo-image) center/25% no-repeat;
+    opacity: 0.25;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+}
+ 
+.border-logoblock{
+        padding: 0.01rem 1rem;
+    box-shadow: 0 0.2rem 0.3rem rgba(0,0,0,.25);
+    margin: 0.5rem 0 0.5rem 0.25rem;
+    display: block;
+    position: relative;
+    background-color: rgb(var(--white-monochrome));
+     border: solid 0.3rem rgb(var(--dark-accent));
+    }
+ 
+.border-logoblock::after{
+    content: "";
+    float: center;
+    border: solid 2px #0000;
+    background: var(--logo-image) center/25% no-repeat;
+    opacity: 0.25;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+}
+ 
+/*奇奇怪怪的阴影块*/
+.shadowblock{
+        padding: 0.01rem 1rem;
+    box-shadow: 0.4rem 0.4rem rgba(0,0,136,.25);
+    margin: 0.5rem 0 0.5rem 0.25rem;
+    display: block;
+    position: relative;
+    background-color: white;
+    border: solid 0.3rem rgb(var(--dark-accent));
+    }
+ 
+.inset-shadowblock{
+        padding: 0.01rem 1rem;
+    box-shadow: inset 5em 1em rgba(128,128,128,.25), inset 8em 2em rgba(0,0,0,.25), 0.1rem 0.2rem 0.2rem rgba(0,0,0,.25);
+    margin: 0.5rem 0 0.5rem 0.25rem;
+    display: block;
+    position: relative;
+    background-color: rgb(var(--white-monochrome));
+    border: solid 0.3rem rgb(var(--dark-accent));
+    }
+
+/* 特殊块 */
+.letterquote {
+   background-color: none;
+   border: 0.2rem solid rgba(var(--dark-accent));
+   padding: 0.1rem 1rem;
+   margin: 0.5rem 0 0.5rem 0.25rem;
+   text-indent: none;
+}
+
+.letterquote::first-letter {
+    font-size:xx-large;
+}
+
+.newspaper
+{
+    -moz-column-count:4; /* Firefox */
+    -webkit-column-count:4; /* Safari and Chrome */
+    column-count:4;
+
+    -moz-column-gap:40px; /* Firefox */
+    -webkit-column-gap:40px; /* Safari and Chrome */
+    column-gap:40px;
+
+    -moz-column-rule:0.2rem solid rgba(var(--dark-accent)); /* Firefox */
+    -webkit-column-rule:0.2rem solid rgba(var(--dark-accent)); /* Safari and Chrome */
+    column-rule:0.2rem solid rgba(var(--dark-accent));
+
+/*我也不知道这是什么总之gp叠说这玩意防止溢出*/
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    word-warp: break-word;
+}
+
+.scroll-box {
+   background-color: none;
+   border: 0.2rem solid rgba(var(--dark-accent));
+   padding: 0.1rem 1rem;
+   margin: 0.5rem 0 0.5rem 0.25rem;
+   max-height: 400px;
+   overflow-y: auto;
+}
+
+.container-box{
+  display:flex;
+  width:100%;
+}
+ 
+.thinbox{
+  width:20%;
+  margin:auto;
+  padding:10px;
+}
+ 
+.thinbox h2{
+    color: white;
+    background-color:#000088;
+    font-size:30px;
+    margin-left:-8px;
+    margin-right:-8px;
+    margin-top:-8px;
+    padding:5px 10px;
+}
+ 
+.widebox{
+  width:80%;
+  margin:auto;
+}
+
+/* 单页迭代 */
+
+.page,
+.top:target ~ .start {
+   display: none;
+}
+.top:target + .page {
+   display: block;
+}
+.top {
+   position: absolute;
+   top: 0;
+}
